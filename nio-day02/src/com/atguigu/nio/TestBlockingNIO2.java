@@ -27,6 +27,7 @@ public class TestBlockingNIO2 {
             buf.clear();
         }
         System.out.println(1111);
+        //调用此方法后客户端的输出流才会关闭，服务端才会读到末尾-1，解除都阻塞的状态
         socketChannel.shutdownOutput();
         int len=0;
         //接受服务端提醒
