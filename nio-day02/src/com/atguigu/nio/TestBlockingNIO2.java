@@ -26,6 +26,7 @@ public class TestBlockingNIO2 {
             socketChannel.write(buf);
             buf.clear();
         }
+        System.out.println(1111);
         socketChannel.shutdownOutput();
         int len=0;
         //接受服务端提醒
